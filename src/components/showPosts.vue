@@ -1,8 +1,9 @@
 <template>
     <div id="show-posts">
         <h1>All Articles</h1>
-        <div v-for="post in posts" class="single-post">
-            <h2>{{post.title}}</h2>
+        <input type="text" v-model="searchPhrase" placeholder="Search posts...">
+        <div v-for="post in filterPosts" class="single-post" :key="post.id">
+            <h2>{{post.title | capitalize}}</h2>
             <article>{{ post.body }}</article>
         </div>
     </div>
@@ -12,7 +13,8 @@
 export default {
     data() {
         return {
-            posts: {}
+            posts: [],
+            searchPhrase: ''
         }
     },
     methods: {
@@ -22,6 +24,13 @@ export default {
         this.$http.get('https://jsonplaceholder.typicode.com/posts').then(function(response){
             this.posts = response.data.slice(0,10);
         });
+    },
+    computed: {
+        filterPosts: function(){
+            return this.posts.filter((post) => {
+                return post.title.match(this.searchPhrase);
+            })
+        }
     }
 }
 </script>
