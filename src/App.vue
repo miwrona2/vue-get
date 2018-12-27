@@ -3,17 +3,19 @@
     <img src="./assets/logo.png">
     <!-- <HelloWorld/> -->
     <show-posts/>
+    <list-posts/>
   </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld'
 import showPosts from './components/showPosts'
+import listPosts from './components/listPosts'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld, showPosts
+    HelloWorld, showPosts, listPosts
   }
 }
 </script>
