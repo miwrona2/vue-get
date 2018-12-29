@@ -1,8 +1,11 @@
 import Vue from 'vue'
 import VueResource from 'vue-resource'
+import VueRouter from 'vue-router'
 import App from './App'
+import routerObject from './routes'
 
 Vue.use(VueResource)
+Vue.use(VueRouter)
 
 Vue.config.productionTip = false
 
@@ -15,5 +18,6 @@ Vue.filter('capitalize', function (value) {
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
-  render: h => h(App)
+  render: h => h(App),
+  router: routerObject
 })

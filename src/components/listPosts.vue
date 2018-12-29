@@ -1,6 +1,6 @@
 <template>
     <div id="show-posts">
-        <h1>List All Articles</h1>
+        <h1>List Articles (only titles)</h1>
         <input type="text" v-model="searchPhrase" placeholder="Search posts...">
         <div v-for="post in filterPosts" class="single-post" :key="post.id">
             <h2>{{post.title | capitalize}}</h2>

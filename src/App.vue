@@ -1,9 +1,14 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
-    <!-- <HelloWorld/> -->
-    <show-posts/>
-    <list-posts/>
+    
+    <div>
+        <router-link to="/">Home</router-link>
+        <router-link to="/list">List</router-link>
+        <router-link :to="{name: 'showPosts'}">Posts</router-link>
+    </div>
+
+    <router-view></router-view>
   </div>
 </template>
 
