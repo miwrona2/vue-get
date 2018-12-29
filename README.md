@@ -3,7 +3,7 @@
 > A Vue.js project
 
 > Code according to [tutorial](https://www.youtube.com/watch?v=5LYrN_cAJoA&list=PL4cUxeGkcC9gQcYgjhBoeQH7wiAyZNrYa)
-with a little changes; episodes: 36, 38, 39
+with a little changes; episodes: 36, 38, 39, 40
 
 ## Build Setup
 

@@ -20,5 +20,6 @@ export default new VueRouter({
       name: 'showPosts',
       component: showPosts
     },
-  ]
+  ],
+  mode: 'history'
 })
